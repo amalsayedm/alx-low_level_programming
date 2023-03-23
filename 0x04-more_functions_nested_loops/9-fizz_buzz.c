@@ -22,6 +22,8 @@ int main(void)
 			printf("Buzz");
 		}
 
+		if (n == 100)
+			continue;
 		printf(" ");
 	}
 
