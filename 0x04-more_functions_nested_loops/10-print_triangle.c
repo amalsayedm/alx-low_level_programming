@@ -18,10 +18,11 @@ void print_triangle(int size)
 			_putchar(' ');
 		for (k = 1; k <= num; k++)
 			_putchar('#');
-		_putchar("\n");
+		_putchar('\n');
 	}
 	}
-	 _putchar("\n");
-
-	return (0);
+	else
+	{
+	 _putchar('\n);
+	}
 }
