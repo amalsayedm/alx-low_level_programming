@@ -8,7 +8,7 @@
 
 void _puts(char *str)
 {
-	if (str != ' ')
+	if (str != '\0')
 	{
 	do {
 		_putchar(*str);
