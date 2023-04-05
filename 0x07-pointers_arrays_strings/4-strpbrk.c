@@ -7,8 +7,9 @@
  * Return: rerturn pointer
 */
 char *_strpbrk(char *s, char *accept)
-{   int index;
-    
+{
+	int index;
+
 	while (*s)
 	{
 		for (index = 0; accept[index]; index++)
