@@ -1,5 +1,4 @@
 #include "main.h"
-#include<stdio.h>
 
 /**
  * main - check the code
@@ -8,6 +7,6 @@
  */
 int main(void)
 {
-    _puts_recursion("Puts with recursion");
+    _print_rev_recursion("\nColton Walker");
     return (0);
 }
