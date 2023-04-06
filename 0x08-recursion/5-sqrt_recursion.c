@@ -20,5 +20,5 @@ int _sqrt_recursion(int n)
 	if (root == n / 2)
 		return (-1);
 
-	return (find_sqrt(n, root + 1));
+	return (_sqrt_recursion(root + 1));
 }
