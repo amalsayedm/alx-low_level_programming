@@ -1,34 +1,37 @@
 #include "main.h"
 
-int disible(int num, int d);
+int divsible(int num, int div);
 int is_prime_number(int n);
 
 /**
- * disible - Checks  number is disible.
+ * divsible - Checksnumber is divisible.
  * @num: The number
- * @d: The disor.
- * Return: If the number is disible or not.
+ * @div: The divisor.
+ *
+ * Return: is divisible - 0.
+ *         is not divisible - 1.
  */
-int disible(int num, int d)
+int divsible(int num, int div)
 {
-	if (num % d == 0)
+	if (num % div == 0)
 		return (0);
 
-	if  (d == num / 2)
+	if (div == num / 2)
 		return (1);
 
-	return  (disible(num, d + 1));
+	return (divsible(num, div + 1));
 }
 
 /**
  * is_prime_number - Checks number is prime.
- * @n: The number
- * Return: return the result
+ * @n: The number to be checked.
+ *
+ * Return: is not prime - 0.
+ *          is prime - 1.
  */
-
 int is_prime_number(int n)
 {
-	int d = 2;
+	int dv = 2;
 
 	if (n <= 1)
 		return (0);
@@ -36,5 +39,5 @@ int is_prime_number(int n)
 	if (n >= 2 && n <= 3)
 		return (1);
 
-	return (disible(n, d));
+	return (divsible(n, dv));
 }
