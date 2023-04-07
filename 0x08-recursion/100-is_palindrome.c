@@ -1,21 +1,24 @@
 #include "main.h"
+
 /**
- *is_palindrome - checks if string is palindrome
- * @s: input string
- * Return: checking result
-*/
+ * stlen - Returns the length of a string.
+ * @s: The string
+ * Return: The length
+ */
 
-int is_palindrome(char *s)
+int stlen(char *s)
 {
-	int index = 0;
+	int len = 0;
 
-	int len = stlen(s);
+	if (*(s + len))
+	{
+		len++;
+		len += stlen(s + len);
+	}
 
-	if (!(*s))
-		return (1);
-
-	return (palindrome(s, len, index));
+	return (len);
 }
+
 /**
  * palindrome - help function is_palindrome.
  * @s: input string
@@ -34,21 +37,22 @@ int palindrome(char *s, int len, int index)
 
 	return (0);
 }
+
+
 /**
- * stlen - Returns the length of a string.
- * @s: The string
- * Return: The length
- */
+ *is_palindrome - checks if string is palindrome
+ * @s: input string
+ * Return: checking result
+*/
 
-int stlen(char *s)
+int is_palindrome(char *s)
 {
-	int len = 0;
+	int index = 0;
 
-	if (*(s + len))
-	{
-		len++;
-		len += stlen(s + len);
-	}
+	int len = stlen(s);
 
-	return (len);
+	if (!(*s))
+		return (1);
+
+	return (palindrome(s, len, index));
 }
