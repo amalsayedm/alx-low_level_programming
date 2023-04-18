@@ -3,9 +3,10 @@
 
 /*
  * File: 3-function_like_macro.h
- * Auth: Amal sayed
+ * Auth: Amal
  * Desc: Header file
  */
+
 #define ABS(x) ((x) < 0 ? (-x) : (x))
 
 #endif
