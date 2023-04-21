@@ -14,10 +14,10 @@
  * @symbol: A symbol representing a data type.
  * @print: A function pointer to a function
  */
-typedef struct printer
+typedef struct printe
 {
 	char *symbol;
-	void (*print)(va_list arg);
+	void (*f)(va_list);
 
 } printer_t;
 
