@@ -61,41 +61,36 @@ void print_string(va_list arg)
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
+	va_list parms;
 	int i = 0, j = 0;
+	char *s = "";
 	printer_t funcs[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
+		{"s", print_string}
 	};
 
-	va_start(args, format);
+	va_start(parms, format);
 
-	while (format && format[i])
+	while (format && (*(format + i)))
 	{
 		j = 0;
 
-		while (funcs[j].symbol)
-		{
-
-			if (format[i] == funcs[j].symbol[0])
-			{
-				funcs[j].f(args);
-		if (!format[i + 1] == '\0')
-		{
-			printf("%s", ", ");
-		}
-			}
+		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
 			j++;
 
-	}
+		if (j < 4)
+		{
+			printf("%s", s);
+			funcs[j].print(parms);
+			s = ", ";
+		}
 
 		i++;
 	}
 
 	printf("\n");
 
-	va_end(args);
+	va_end(parms);
 }

@@ -12,12 +12,12 @@
 /**
  * struct printer - A new struct type defining a printer.
  * @symbol: A symbol representing a data type.
- * @print: A function pointer to a function
+ * @print: A function pointer to a function that prints
  */
-typedef struct printe
+typedef struct printer
 {
 	char *symbol;
-	void (*f)(va_list);
+	void (*print)(va_list arg);
 
 } printer_t;
 
