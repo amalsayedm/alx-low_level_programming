@@ -42,9 +42,9 @@ while (*str)
 	{
 		lastnode = *head;
 		while (lastnode->next != NULL)
-			lastnode = last->next;
+			lastnode = lastnode->next;
 		lastnode->next = newnode;
 	}
 
-	return (*head)
+	return (*head);
 }
