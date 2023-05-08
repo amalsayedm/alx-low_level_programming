@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	temp = create_buffer(argv[2]);
+	temp = create_temp(argv[2]);
 	ffile = open(argv[1], O_RDONLY);
 	if (ffile == -1)
 	{
