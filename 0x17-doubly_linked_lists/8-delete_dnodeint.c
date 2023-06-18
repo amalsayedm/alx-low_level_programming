@@ -3,7 +3,7 @@
 
 /**
  * delete_dnodeint_at_index - Deletes a node at a given index
- * @head: A pointer to the head 
+ * @head: A pointer to the head
  * @index: The index
  * Return: Upon success - 1.
  *         Otherwise - -1.
