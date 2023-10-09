@@ -3,7 +3,7 @@
 int recurse_binary(int *array, size_t left, size_t right, int value);
 
 /**
- * binary_search - search for value in array of sorted ints using binary search algo
+ * binary_search - implement the binary search algo
  * @array: array
  * @size: size of array
  * @value: value to search
