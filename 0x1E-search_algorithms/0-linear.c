@@ -37,5 +37,5 @@ int recurse_search(int *arr, size_t size, int val, size_t idx)
 	if (arr[idx] == val)
 		return (idx);
 
-	return (recurse_helper(arr, size, val, idx + 1));
+	return (recurse_search(arr, size, val, idx + 1));
 }
